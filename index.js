@@ -39,8 +39,7 @@ client.on('messageCreate', async message => {
     if (message.author.bot) return;
 
     if (message.content === '!ping') {
-        await message.delete();
-        const sent = await message.channel.send('⏳ Ping...');
+        const sent = await message.reply('⏳ Ping...');
         const latency = sent.createdTimestamp - message.createdTimestamp;
         sent.edit(`🏓 Pong ! (${latency} ms)`);
     }
