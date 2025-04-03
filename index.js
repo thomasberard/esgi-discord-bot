@@ -39,9 +39,20 @@ client.on('messageCreate', async message => {
     if (message.author.bot) return;
 
     if (message.content === '!ping') {
-        const sent = await message.reply('⏳ Ping...');
-        const latency = sent.createdTimestamp - message.createdTimestamp;
-        sent.edit(`🏓 Pong ! (${latency} ms)`);
+        const reply = await message.reply('⏳ Ping...');
+        const latency = reply.createdTimestamp - message.createdTimestamp;
+
+        await reply.edit(`🏓 Pong ! (${latency} ms)`);
+
+        // Supprime les deux messages après 10 secondes
+        setTimeout(async () => {
+            try {
+                await reply.delete();
+                await message.delete();
+            } catch (error) {
+                console.error('❌ Impossible de supprimer un message :', error);
+            }
+        }, 10000);
     }
 });
 
