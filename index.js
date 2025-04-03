@@ -7,6 +7,14 @@ const client = new Client({
 
 client.once('ready', () => {
   console.log(`✅ Bot connecté en tant que ${client.user.tag}`);
+
+  const statuses = process.env.STATUS_MESSAGES.split('|');
+  let index = 0;
+
+  setInterval(() => {
+    client.user.setActivity(statuses[index], { type: 'WATCHING' });
+    index = (index + 1) % statuses.length;
+  }, 10000);
 });
 
 client.on('messageCreate', async message => {
