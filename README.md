@@ -42,8 +42,8 @@ esgi-discord-bot/
 1. Cloner le projet :
 
 ```bash
-git clone https://github.com/<votre-utilisateur>/agent-esgi.git
-cd agent-esgi
+git clone https://github.com/thomasberard/esgi-discord-bot.git
+cd esgi-discord-bot
 ```
 
 2. Installer les dépendances :
@@ -89,8 +89,8 @@ npm start
 
 ## 👤 Auteur
 
-[![LinkedIn](https://img.shields.io/badge/-Thomas%20Bérard-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/thomas-berard/)  
-💼 [Site Web](https://votre-site-web.com)  
+[![LinkedIn](https://img.shields.io/badge/-Thomas%20BERARD-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/berardthomas/)  
+💼 [Site Web](https://thomasberard.com)  
 💬 [Rejoindre le Discord ESGI Grenoble](https://discord.gg/ton-invitation)
 
 ---
